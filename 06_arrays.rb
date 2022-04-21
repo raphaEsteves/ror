@@ -14,3 +14,12 @@ puts '---'
 u.each do |j|
     puts j
 end
+
+puts '---'
+
+a = [[11,12,13],[21,22,23],[31,32,33]]
+a.each do |externo|
+    externo.each do |interno|
+        puts interno
+    end
+end
