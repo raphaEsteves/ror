@@ -1,6 +1,12 @@
 class Pessoa
     #Cria getters e setters dos atributos
     attr_accessor :nome, :email
+
+    #método de classe e com o self. não precisa instanciar o objeto.
+    #basta utilizar Pessoa.gritar("msg")
+    def self.gritar(texto) 
+        "#{texto}!!!"
+    end
 end
 
 #classe PessoaFisica possui atributos da classe Pessoa
@@ -21,7 +27,7 @@ class PessoaJuridica < Pessoa
     attr_accessor :cnpj
 
     def pagar_fornecedor
-        puts "Pagando fornecedor."
+        "Pagando fornecedor."
     end
 end
 
@@ -43,5 +49,4 @@ pj.cnpj = "45345"
 
 #"Getters"
 puts "O senhor #{p1.nome}, email é #{p1.email}, sem cpf, e a senhorita #{pf.nome}, email #{pf.email} e cpf #{pf.cpf}, são donos da empresa #{pj.nome}, email #{pj.email} e CNPJ #{pj.cnpj}. Ambos pretendem realizar uma operação."
-pj.pagar_fornecedor
-
+puts pj.pagar_fornecedor
